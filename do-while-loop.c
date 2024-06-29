@@ -5,6 +5,6 @@ int main() {
     do {
         printf("%d\n", i);
         i++;
-    } while (i <= 5);
+    } while (i <= 100);
     return 0;
 }
