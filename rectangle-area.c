@@ -6,9 +6,7 @@ void calculateAreaWithUserInputs();
 
 int main() {
     int choice;
-
     while(1) {
-        // Display the menu
         printf("\nMenu:\n");
         printf("1. Calculate area with hard-coded inputs\n");
         printf("2. Calculate area with user-supplied inputs\n");
@@ -16,7 +14,6 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        // Perform action based on user choice
         switch(choice) {
             case 1:
                 calculateAreaWithHardcodedInputs();
@@ -35,7 +32,6 @@ int main() {
     return 0;
 }
 
-// Function to calculate area with hard-coded inputs
 void calculateAreaWithHardcodedInputs() {
     int length = 5;
     int width = 10;
@@ -46,7 +42,6 @@ void calculateAreaWithHardcodedInputs() {
     printf("Area = %d\n", area);
 }
 
-// Function to calculate area with user-supplied inputs
 void calculateAreaWithUserInputs() {
     int length, width, area;
 
