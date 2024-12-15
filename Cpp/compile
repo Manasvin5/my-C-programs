@@ -1,0 +1,20 @@
+#!/bin/bash
+
+SOURCE_DIR="."
+
+
+BINARY_DIR="."
+
+mkdir -p "$BINARY_DIR"
+for file in "$SOURCE_DIR"/*.cpp; do
+    filename=$(basename -- "$file")
+    base_name="${filename%.*}"
+    g++ "$file" -o "$BINARY_DIR/$base_name"
+    if [ $? -eq 0 ]; then
+        echo "Compiled $file successfully."
+    else
+        echo "Failed to compile $file."
+    fi
+done
+
+echo "All files processed."
