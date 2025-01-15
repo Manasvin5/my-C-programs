@@ -9,7 +9,7 @@ mkdir -p "$BINARY_DIR"
 for file in "$SOURCE_DIR"/*.c; do
     filename=$(basename -- "$file")
     base_name="${filename%.*}"
-    tcc "$file" -o "$BINARY_DIR/$base_name"
+    gcc "$file" -o "$BINARY_DIR/$base_name"
     if [ $? -eq 0 ]; then
         echo "Compiled $file successfully."
     else
